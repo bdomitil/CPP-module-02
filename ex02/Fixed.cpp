@@ -168,3 +168,31 @@ Fixed Fixed :: operator-- (int) //prefix
     this->_fixed_point -= _smallest_repres;
     return (tmp);
 }
+
+Fixed &Fixed :: max (Fixed &fix1, Fixed &fix2)
+{
+    if (fix1 > fix2)
+        return (fix1);
+    return (fix2);
+}
+
+Fixed  const &Fixed :: max (const Fixed &fix1, const Fixed &fix2)
+{
+    if (fix1 > fix2)
+        return (fix1);
+    return (fix2);
+}
+
+Fixed &Fixed :: min (Fixed &fix1, Fixed &fix2)
+{
+    if (fix1 < fix2)
+        return (fix1);
+    return (fix2);
+}
+
+Fixed  const &Fixed :: min (const Fixed &fix1, const Fixed &fix2)
+{
+    if (fix1 < fix2)
+        return (fix1);
+    return (fix1);
+}
